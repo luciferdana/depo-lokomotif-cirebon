@@ -155,7 +155,12 @@ export default function ChecksheetPage() {
                         </div>
                     ) : (
                         checksheets.map((cs) => (
-                            <div key={cs.id} className="checksheet-card">
+                            <div
+                                key={cs.id}
+                                className="checksheet-card"
+                                style={{ cursor: 'pointer' }}
+                                onClick={() => router.push(`/mekanik/checksheet/${cs.id}`)}
+                            >
                                 <div className="checksheet-header">
                                     <div>
                                         <span className="checksheet-title">{cs.equipmentName}</span>

@@ -30,9 +30,29 @@ const WarningIcon = () => (
     </svg>
 )
 
+interface Checksheet {
+    id: string
+    equipmentId: string
+    equipmentName: string
+    template: string
+    date: string
+    status: 'progress' | 'selesai' | 'pending'
+    progress: number
+    description: string
+    items?: any[]
+}
+
 export default function MekanikDashboard() {
     const router = useRouter()
     const [user, setUser] = useState<User | null>(null)
+    const [checksheets, setChecksheets] = useState<Checksheet[]>([])
+    const [stats, setStats] = useState({
+        total: 0,
+        selesai: 0,
+        progress: 0,
+        perhatian: 0,
+        avgProgress: 0
+    })
 
     useEffect(() => {
         const session = getSession()
@@ -41,6 +61,31 @@ export default function MekanikDashboard() {
             return
         }
         setUser(session)
+
+        // Load checksheets from localStorage
+        const savedChecksheets = localStorage.getItem('depo_checksheets')
+        if (savedChecksheets) {
+            const data: Checksheet[] = JSON.parse(savedChecksheets)
+            setChecksheets(data)
+
+            // Calculate stats
+            const total = data.length
+            const selesai = data.filter(cs => cs.status === 'selesai' || cs.progress === 100).length
+            const inProgress = data.filter(cs => cs.status === 'progress' && cs.progress < 100 && cs.progress > 0).length
+            const perhatian = data.filter(cs => {
+                // Check if any items have N.OK status
+                if (cs.items) {
+                    return cs.items.some((item: any) => item.status === 'nok')
+                }
+                return false
+            }).length
+
+            const avgProgress = total > 0
+                ? Math.round(data.reduce((sum, cs) => sum + cs.progress, 0) / total)
+                : 0
+
+            setStats({ total, selesai, progress: inProgress, perhatian, avgProgress })
+        }
     }, [router])
 
     if (!user) {
@@ -69,7 +114,7 @@ export default function MekanikDashboard() {
                         <div className="stat-card">
                             <div>
                                 <p className="stat-card-label">Total Checksheet</p>
-                                <p className="stat-card-value">0</p>
+                                <p className="stat-card-value">{stats.total}</p>
                             </div>
                             <div className="stat-card-icon blue">
                                 <DocumentIcon />
@@ -78,7 +123,7 @@ export default function MekanikDashboard() {
                         <div className="stat-card">
                             <div>
                                 <p className="stat-card-label">Selesai</p>
-                                <p className="stat-card-value">0</p>
+                                <p className="stat-card-value">{stats.selesai}</p>
                             </div>
                             <div className="stat-card-icon green">
                                 <CheckIcon />
@@ -87,7 +132,7 @@ export default function MekanikDashboard() {
                         <div className="stat-card">
                             <div>
                                 <p className="stat-card-label">Dalam Proses</p>
-                                <p className="stat-card-value">0</p>
+                                <p className="stat-card-value">{stats.progress}</p>
                             </div>
                             <div className="stat-card-icon blue">
                                 <ClockIcon />
@@ -96,7 +141,7 @@ export default function MekanikDashboard() {
                         <div className="stat-card">
                             <div>
                                 <p className="stat-card-label">Dalam Perhatian</p>
-                                <p className="stat-card-value">0</p>
+                                <p className="stat-card-value">{stats.perhatian}</p>
                             </div>
                             <div className="stat-card-icon red">
                                 <WarningIcon />
@@ -108,54 +153,74 @@ export default function MekanikDashboard() {
                     <div className="section-card">
                         <div className="section-card-header">
                             <h3 className="section-card-title">Progress Checksheet</h3>
-                            <span className="section-card-value">0%</span>
+                            <span className="section-card-value">{stats.avgProgress}%</span>
                         </div>
                         <div className="progress-bar">
-                            <div className="progress-bar-fill orange" style={{ width: '0%' }}></div>
+                            <div
+                                className={`progress-bar-fill ${stats.avgProgress === 100 ? 'green' : 'orange'}`}
+                                style={{ width: `${stats.avgProgress}%` }}
+                            ></div>
                         </div>
-                        <p className="progress-text">0 dari 0</p>
+                        <p className="progress-text">{stats.selesai} dari {stats.total} checksheet selesai</p>
 
                         <div className="mini-stats">
                             <div className="mini-stat">
-                                <p className="mini-stat-value">0</p>
+                                <p className="mini-stat-value">{stats.selesai}</p>
                                 <p className="mini-stat-label">Selesai</p>
                             </div>
                             <div className="mini-stat">
-                                <p className="mini-stat-value">0</p>
+                                <p className="mini-stat-value">{stats.progress}</p>
                                 <p className="mini-stat-label">Progress</p>
                             </div>
                             <div className="mini-stat">
-                                <p className="mini-stat-value">0</p>
+                                <p className="mini-stat-value">{stats.perhatian}</p>
                                 <p className="mini-stat-label">Dalam Perhatian</p>
                             </div>
                         </div>
                     </div>
 
-                    {/* Dalam Perbaikan */}
+                    {/* Recent Checksheets */}
                     <div className="section-card">
                         <div className="section-card-header">
-                            <h3 className="section-card-title">Dalam Perbaikan</h3>
-                            <span className="section-card-value">0%</span>
+                            <h3 className="section-card-title">Checksheet Terbaru</h3>
+                            <a
+                                href="/mekanik/checksheet"
+                                className="link"
+                                style={{ fontSize: '0.875rem' }}
+                            >
+                                Lihat Semua
+                            </a>
                         </div>
-                        <div className="progress-bar">
-                            <div className="progress-bar-fill orange" style={{ width: '0%' }}></div>
-                        </div>
-                        <p className="progress-text">0 dari 0</p>
 
-                        <div className="mini-stats">
-                            <div className="mini-stat">
-                                <p className="mini-stat-value">0</p>
-                                <p className="mini-stat-label">Selesai</p>
+                        {checksheets.length === 0 ? (
+                            <p style={{ color: '#64748b', textAlign: 'center', padding: '2rem' }}>
+                                Belum ada checksheet. Klik "Buat Checksheet" untuk memulai.
+                            </p>
+                        ) : (
+                            <div className="activity-list">
+                                {checksheets.slice(0, 5).map((cs) => (
+                                    <div
+                                        key={cs.id}
+                                        className="activity-item"
+                                        style={{ cursor: 'pointer' }}
+                                        onClick={() => router.push(`/mekanik/checksheet/${cs.id}`)}
+                                    >
+                                        <div className="activity-avatar">
+                                            {cs.equipmentName.substring(0, 2).toUpperCase()}
+                                        </div>
+                                        <div className="activity-info">
+                                            <p className="activity-name">{cs.equipmentName}</p>
+                                            <p className="activity-desc">{cs.template} • {cs.date}</p>
+                                        </div>
+                                        <div className="activity-meta">
+                                            <span className={`badge ${cs.progress === 100 ? 'badge-green' : 'badge-orange'}`}>
+                                                {cs.progress}%
+                                            </span>
+                                        </div>
+                                    </div>
+                                ))}
                             </div>
-                            <div className="mini-stat">
-                                <p className="mini-stat-value">0</p>
-                                <p className="mini-stat-label">Progress</p>
-                            </div>
-                            <div className="mini-stat">
-                                <p className="mini-stat-value">0</p>
-                                <p className="mini-stat-label">Dalam Perhatian</p>
-                            </div>
-                        </div>
+                        )}
                     </div>
                 </div>
             </main>

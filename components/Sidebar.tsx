@@ -67,7 +67,7 @@ export default function Sidebar({ user, dashboardTitle }: SidebarProps) {
     return (
         <aside className="sidebar">
             <div className="sidebar-logo">
-                <span className="sidebar-logo-box">KAI</span>
+                <img src="/logo.jpeg" alt="KAI Logo" style={{ width: 40, height: 40, borderRadius: 8, objectFit: 'cover' }} />
                 <span className="sidebar-logo-text">{dashboardTitle}</span>
             </div>
 

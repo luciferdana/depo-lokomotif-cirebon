@@ -1,0 +1,60 @@
+{
+  "id": "genset-5kva",
+  "name": "GENSET 5KVA",
+  "code": "GENSET5KVA",
+  "category": "Heavy Equipment",
+  "location": "Depo Lokomotif Cirebon",
+  "status": "Aktif",
+  "sheets": [
+    "MINGGUAN",
+    "150 JAM",
+    "300 JAM",
+    "600 JAM ",
+    "1200 JAM ",
+    "2400 JAM",
+    "4800 JAM",
+    "BULANAN"
+  ],
+  "checksheet_templates": {
+    "MINGGUAN": {
+      "name": "MINGGUAN",
+      "type": "Mingguan",
+      "items": []
+    },
+    "150 JAM": {
+      "name": "150 JAM",
+      "type": "150 JAM",
+      "items": []
+    },
+    "300 JAM": {
+      "name": "300 JAM",
+      "type": "300 JAM",
+      "items": []
+    },
+    "600 JAM ": {
+      "name": "600 JAM ",
+      "type": "600 JAM",
+      "items": []
+    },
+    "1200 JAM ": {
+      "name": "1200 JAM ",
+      "type": "1200 JAM",
+      "items": []
+    },
+    "2400 JAM": {
+      "name": "2400 JAM",
+      "type": "2400 JAM",
+      "items": []
+    },
+    "4800 JAM": {
+      "name": "4800 JAM",
+      "type": "4800 JAM",
+      "items": []
+    },
+    "BULANAN": {
+      "name": "BULANAN",
+      "type": "Bulanan",
+      "items": []
+    }
+  }
+}

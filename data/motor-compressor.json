@@ -1,0 +1,145 @@
+{
+  "id": "motor-compressor",
+  "name": "MOTOR COMPRESSOR",
+  "code": "MOTORCOMPRESSOR",
+  "category": "Heavy Equipment",
+  "location": "Depo Lokomotif Cirebon",
+  "status": "Aktif",
+  "sheets": [
+    "PH",
+    "PM",
+    "P1"
+  ],
+  "checksheet_templates": {
+    "PH": {
+      "name": "PH",
+      "type": "Harian",
+      "items": [
+        {
+          "no": 1,
+          "category": null,
+          "name": "MCB",
+          "description": "Periksa tegangan 3 phase",
+          "sub_items": []
+        },
+        {
+          "no": 2,
+          "category": null,
+          "name": "Minyak Pelumas Engine",
+          "description": "Pemeriksaan volume dan bocoran",
+          "sub_items": []
+        },
+        {
+          "no": 3,
+          "category": null,
+          "name": "Tangki Udara",
+          "description": "Periksa bocoran dan air kondensasi",
+          "sub_items": []
+        },
+        {
+          "no": 4,
+          "category": null,
+          "name": "Manometer  Indikator",
+          "description": "Periksa keterfungsian dan bocoran",
+          "sub_items": []
+        }
+      ]
+    },
+    "PM": {
+      "name": "PM",
+      "type": "Bulanan",
+      "items": [
+        {
+          "no": 1,
+          "category": null,
+          "name": "Input 3 phase",
+          "description": "Periksa dan bersihkan",
+          "sub_items": []
+        },
+        {
+          "no": 2,
+          "category": null,
+          "name": "Pipa Pengembalian",
+          "description": "Periksa dan bersihkan",
+          "sub_items": []
+        },
+        {
+          "no": 3,
+          "category": null,
+          "name": "Filter Elemen Minyak Pelumas",
+          "description": "Periksa bocoran dan ganti",
+          "sub_items": []
+        },
+        {
+          "no": 4,
+          "category": null,
+          "name": "Filter kontrol",
+          "description": "Periksa dan bersihkan",
+          "sub_items": []
+        },
+        {
+          "no": 5,
+          "category": null,
+          "name": "Drain Valve",
+          "description": "Periksa fungsi kerjanya",
+          "sub_items": []
+        },
+        {
+          "no": 6,
+          "category": null,
+          "name": "Selang Hisap",
+          "description": "Periksa tiada bocoran",
+          "sub_items": []
+        }
+      ]
+    },
+    "P1": {
+      "name": "P1",
+      "type": "Bulanan",
+      "items": [
+        {
+          "no": 1,
+          "category": null,
+          "name": "Input 3 phase",
+          "description": "Periksa dan bersihkan",
+          "sub_items": []
+        },
+        {
+          "no": 2,
+          "category": null,
+          "name": "Pipa Pengembalian",
+          "description": "Periksa dan bersihkan",
+          "sub_items": []
+        },
+        {
+          "no": 3,
+          "category": null,
+          "name": "Filter Elemen Minyak Pelumas",
+          "description": "Periksa bocoran dan ganti",
+          "sub_items": []
+        },
+        {
+          "no": 4,
+          "category": null,
+          "name": "Filter kontrol",
+          "description": "Periksa dan bersihkan",
+          "sub_items": []
+        },
+        {
+          "no": 5,
+          "category": null,
+          "name": "Drain Valve",
+          "description": "Periksa fungsi kerjanya",
+          "sub_items": []
+        },
+        {
+          "no": 6,
+          "category": null,
+          "name": "Selang Hisap",
+          "description": "Periksa tiada bocoran",
+          "sub_items": []
+        }
+      ]
+    }
+  }
+}

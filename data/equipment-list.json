@@ -1,0 +1,79 @@
+[
+  {
+    "id": "crane-100t",
+    "name": "CRANE 100T",
+    "code": "CRANE100T",
+    "category": "Heavy Equipment",
+    "location": "Depo Lokomotif Cirebon",
+    "status": "Aktif",
+    "sheets": [
+      "Pharian",
+      "P1CRANE",
+      "P6CRANE"
+    ]
+  },
+  {
+    "id": "genset-2kva",
+    "name": "GENSET 2KVA",
+    "code": "GENSET2KVA",
+    "category": "Heavy Equipment",
+    "location": "Depo Lokomotif Cirebon",
+    "status": "Aktif",
+    "sheets": [
+      "MINGGUAN",
+      "150 JAM",
+      "300 JAM",
+      "600 JAM ",
+      "1200 JAM ",
+      "2400 JAM",
+      "4800 JAM",
+      "BULANAN"
+    ]
+  },
+  {
+    "id": "genset-5kva",
+    "name": "GENSET 5KVA",
+    "code": "GENSET5KVA",
+    "category": "Heavy Equipment",
+    "location": "Depo Lokomotif Cirebon",
+    "status": "Aktif",
+    "sheets": [
+      "MINGGUAN",
+      "150 JAM",
+      "300 JAM",
+      "600 JAM ",
+      "1200 JAM ",
+      "2400 JAM",
+      "4800 JAM",
+      "BULANAN"
+    ]
+  },
+  {
+    "id": "motor-compressor",
+    "name": "MOTOR COMPRESSOR",
+    "code": "MOTORCOMPRESSOR",
+    "category": "Heavy Equipment",
+    "location": "Depo Lokomotif Cirebon",
+    "status": "Aktif",
+    "sheets": [
+      "PH",
+      "PM",
+      "P1"
+    ]
+  },
+  {
+    "id": "overhead-crane-5ton",
+    "name": "OVERHEAD CRANE 5TON",
+    "code": "OVERHEADCRANE5TON",
+    "category": "Heavy Equipment",
+    "location": "Depo Lokomotif Cirebon",
+    "status": "Aktif",
+    "sheets": [
+      "(PH) SHEET 1",
+      "(PH) SHEET 2",
+      "(P1) SHEET 1",
+      "(P1) SHEET 2",
+      "(P1) SHEET 3"
+    ]
+  }
+]

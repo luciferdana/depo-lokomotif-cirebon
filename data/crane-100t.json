@@ -1,0 +1,1778 @@
+{
+  "id": "crane-100t",
+  "name": "CRANE 100T",
+  "code": "CRANE100T",
+  "category": "Heavy Equipment",
+  "location": "Depo Lokomotif Cirebon",
+  "status": "Aktif",
+  "sheets": [
+    "Pharian",
+    "P1CRANE",
+    "P6CRANE"
+  ],
+  "checksheet_templates": {
+    "Pharian": {
+      "name": "Pharian",
+      "type": "Harian",
+      "items": [
+        {
+          "no": 1,
+          "category": null,
+          "name": "Periksa lemari kabinet",
+          "description": null,
+          "sub_items": []
+        },
+        {
+          "no": 2,
+          "category": null,
+          "name": "Periksa baterai dan saklar utama",
+          "description": null,
+          "sub_items": []
+        },
+        {
+          "no": 3,
+          "category": null,
+          "name": "Periksa fasilitas pelindung beban lebih",
+          "description": null,
+          "sub_items": []
+        },
+        {
+          "no": 4,
+          "category": null,
+          "name": "Periksa penerangan (secara umum)",
+          "description": null,
+          "sub_items": []
+        },
+        {
+          "no": 5,
+          "category": null,
+          "name": "Periksa kamera video",
+          "description": null,
+          "sub_items": []
+        },
+        {
+          "no": 6,
+          "category": null,
+          "name": "Periksa layar monitor",
+          "description": null,
+          "sub_items": []
+        },
+        {
+          "no": 7,
+          "category": null,
+          "name": "Periksa kabel drum pada boom",
+          "description": null,
+          "sub_items": []
+        },
+        {
+          "no": 8,
+          "category": null,
+          "name": "Periksa kabel drum pada counterweight",
+          "description": null,
+          "sub_items": []
+        },
+        {
+          "no": 9,
+          "category": null,
+          "name": "Periksa hoist limit switch",
+          "description": null,
+          "sub_items": []
+        },
+        {
+          "no": 10,
+          "category": null,
+          "name": "Periksa tombol emergency",
+          "description": null,
+          "sub_items": []
+        },
+        {
+          "no": 1,
+          "category": null,
+          "name": "Periksa lampu kontrol",
+          "description": null,
+          "sub_items": []
+        },
+        {
+          "no": 2,
+          "category": null,
+          "name": "Periksa lampu Boom",
+          "description": null,
+          "sub_items": []
+        },
+        {
+          "no": 3,
+          "category": null,
+          "name": "Periksa lampu Penerangan luar",
+          "description": null,
+          "sub_items": []
+        },
+        {
+          "no": 4,
+          "category": null,
+          "name": "Periksa lampu Sorot Ujung 1, 2",
+          "description": null,
+          "sub_items": []
+        },
+        {
+          "no": 5,
+          "category": null,
+          "name": "Periksa lampu instrument",
+          "description": null,
+          "sub_items": []
+        },
+        {
+          "no": 6,
+          "category": null,
+          "name": "Periksa lampu kabin",
+          "description": null,
+          "sub_items": []
+        },
+        {
+          "no": 7,
+          "category": null,
+          "name": "Periksa lampu Telescopic",
+          "description": null,
+          "sub_items": []
+        },
+        {
+          "no": 8,
+          "category": null,
+          "name": "Periksa lampu ruang mesin",
+          "description": null,
+          "sub_items": []
+        },
+        {
+          "no": 9,
+          "category": null,
+          "name": "Pada keadaan motor diesel hidup lampu merah          indikator (Control Engine) harus tidak menyala",
+          "description": null,
+          "sub_items": []
+        },
+        {
+          "no": 1,
+          "category": null,
+          "name": "Periksa tangki fluida hidrolik",
+          "description": "Baik",
+          "sub_items": []
+        },
+        {
+          "no": 2,
+          "category": null,
+          "name": "Sistem pompa :",
+          "description": null,
+          "sub_items": [
+            {
+              "name": "- Periksa Kopling",
+              "description": "Baik berfungsi"
+            },
+            {
+              "name": "- Periksa Transfer case",
+              "description": "Baik berfungsi"
+            },
+            {
+              "name": "- Periksa Pompa hidrolik utama",
+              "description": "Baik berfungsi"
+            }
+          ]
+        },
+        {
+          "no": 3,
+          "category": null,
+          "name": "Periksa unit pompa darurat",
+          "description": "Baik berfungsi",
+          "sub_items": []
+        },
+        {
+          "no": 4,
+          "category": null,
+          "name": "Periksa valve block pada rangka atas",
+          "description": "Baik berfungsi",
+          "sub_items": []
+        },
+        {
+          "no": 5,
+          "category": null,
+          "name": "Periksa valve block pada rangka bawah",
+          "description": "Baik berfungsi",
+          "sub_items": []
+        },
+        {
+          "no": 6,
+          "category": null,
+          "name": "Periksa counterweight telescope",
+          "description": "Baik berfungsi",
+          "sub_items": []
+        },
+        {
+          "no": 7,
+          "category": null,
+          "name": "Periksa telescopic boom",
+          "description": "Baik berfungsi",
+          "sub_items": []
+        },
+        {
+          "no": 8,
+          "category": null,
+          "name": "Periksa silinder boom",
+          "description": "Baik berfungsi",
+          "sub_items": []
+        },
+        {
+          "no": 9,
+          "category": null,
+          "name": "Periksa mekanisme pengunci rangka atas",
+          "description": "Baik berfungsi",
+          "sub_items": []
+        },
+        {
+          "no": 10,
+          "category": null,
+          "name": "Periksa propping system",
+          "description": "Baik berfungsi",
+          "sub_items": []
+        },
+        {
+          "no": 1,
+          "category": null,
+          "name": "Periksa pengering udara bertekanan, perangkat pengatur tekanan",
+          "description": "Berfungsi",
+          "sub_items": []
+        },
+        {
+          "no": 2,
+          "category": null,
+          "name": "Periksa sistem rem pelayanan",
+          "description": "Berfungsi",
+          "sub_items": []
+        },
+        {
+          "no": 3,
+          "category": null,
+          "name": "Periksa klakson (horn)",
+          "description": "Berfungsi",
+          "sub_items": []
+        },
+        {
+          "no": 4,
+          "category": null,
+          "name": "Periksa valve blocking",
+          "description": "Berfungsi",
+          "sub_items": []
+        },
+        {
+          "no": 1,
+          "category": null,
+          "name": "Periksa minyak pelumas",
+          "description": "Periksa kondisi dan volume",
+          "sub_items": []
+        },
+        {
+          "no": 2,
+          "category": null,
+          "name": "Periksa air pendingin",
+          "description": "Periksa kondisi dan volume",
+          "sub_items": []
+        },
+        {
+          "no": 3,
+          "category": null,
+          "name": "Periksa penutup air pendingin",
+          "description": "Periksa keterfungsian",
+          "sub_items": []
+        },
+        {
+          "no": 4,
+          "category": null,
+          "name": "Bahan bakar",
+          "description": null,
+          "sub_items": [
+            {
+              "name": "- Periksa keterfungsian leher pengisian dengan lubang udara",
+              "description": "Periksa keterfungsian"
+            },
+            {
+              "name": "- Periksa Saringan bahan bakar",
+              "description": "Bersihkan saringan"
+            }
+          ]
+        },
+        {
+          "no": 5,
+          "category": null,
+          "name": "Minyak Transmisi",
+          "description": null,
+          "sub_items": [
+            {
+              "name": "- Periksa / tambah minyak di peti roda gigi",
+              "description": "Liter"
+            }
+          ]
+        },
+        {
+          "no": 6,
+          "category": null,
+          "name": "Periksa keterfungsian mesin diesel darurat",
+          "description": "Periksa keterfungsian",
+          "sub_items": []
+        },
+        {
+          "no": 1,
+          "category": null,
+          "name": "Tangki angin",
+          "description": "Kg/cm²",
+          "sub_items": []
+        },
+        {
+          "no": 2,
+          "category": null,
+          "name": "Angin Abar",
+          "description": "Kg/cm²",
+          "sub_items": []
+        },
+        {
+          "no": 3,
+          "category": null,
+          "name": "Periksa suhu air pendingin",
+          "description": "°C",
+          "sub_items": []
+        },
+        {
+          "no": 4,
+          "category": null,
+          "name": "Periksa meteran isi bahan bakar",
+          "description": "Liter",
+          "sub_items": []
+        },
+        {
+          "no": 5,
+          "category": null,
+          "name": "Periksa meteran Voltage meter",
+          "description": "Volt",
+          "sub_items": []
+        },
+        {
+          "no": 6,
+          "category": null,
+          "name": "Periksa kabin operator",
+          "description": "Bersih",
+          "sub_items": []
+        },
+        {
+          "no": 7,
+          "category": null,
+          "name": "Periksa tempat duduk",
+          "description": "Berfungsi",
+          "sub_items": []
+        },
+        {
+          "no": 8,
+          "category": null,
+          "name": "Periksa kondisi wiper dan washer",
+          "description": "Berfungsi",
+          "sub_items": []
+        },
+        {
+          "no": 9,
+          "category": null,
+          "name": "Periksa volume air washer",
+          "description": "Liter",
+          "sub_items": []
+        },
+        {
+          "no": 10,
+          "category": null,
+          "name": "Periksa Lampu - lampu indikator",
+          "description": "Baik dan Nyala",
+          "sub_items": []
+        },
+        {
+          "no": 11,
+          "category": null,
+          "name": "Periksa penyejuk ruangan (AC)",
+          "description": "Berfungsi",
+          "sub_items": []
+        },
+        {
+          "no": 1,
+          "category": null,
+          "name": "Periksa rope pulley",
+          "description": "Baik",
+          "sub_items": []
+        },
+        {
+          "no": 2,
+          "category": null,
+          "name": "Periksa roda gigi pemutar",
+          "description": "Baik",
+          "sub_items": []
+        },
+        {
+          "no": 3,
+          "category": null,
+          "name": "Periksa hois Gear",
+          "description": "Baik",
+          "sub_items": []
+        },
+        {
+          "no": 1,
+          "category": null,
+          "name": "Periksa kondisi Boffer",
+          "description": "Baik",
+          "sub_items": []
+        },
+        {
+          "no": 2,
+          "category": null,
+          "name": "Periksa kondisi Rantai pengaman",
+          "description": "Baik",
+          "sub_items": []
+        },
+        {
+          "no": 3,
+          "category": null,
+          "name": "Periksa sistem rem tangan",
+          "description": "Baik",
+          "sub_items": []
+        },
+        {
+          "no": 4,
+          "category": null,
+          "name": "Periksa disk brake",
+          "description": "Baik",
+          "sub_items": []
+        },
+        {
+          "no": 5,
+          "category": null,
+          "name": "Periksa bearing roda",
+          "description": "Normal",
+          "sub_items": []
+        },
+        {
+          "no": 6,
+          "category": null,
+          "name": "Periksa leap spring",
+          "description": "Terpasang lengkap",
+          "sub_items": []
+        },
+        {
+          "no": 7,
+          "category": null,
+          "name": "Periksa bogie  ( Frame Roda )",
+          "description": "Baik",
+          "sub_items": []
+        },
+        {
+          "no": 8,
+          "category": null,
+          "name": "Periksa motor penggerak roda",
+          "description": "Berfungsi",
+          "sub_items": []
+        },
+        {
+          "no": 9,
+          "category": null,
+          "name": "Periksa Flexible house",
+          "description": "Baik",
+          "sub_items": []
+        },
+        {
+          "no": 10,
+          "category": null,
+          "name": "Periksa traveling Gear",
+          "description": "Berfungsi",
+          "sub_items": []
+        },
+        {
+          "no": 11,
+          "category": null,
+          "name": "Buang air kondensasi dari tangki-tangki angin dan kondensasi kompressor",
+          "description": "Bersih",
+          "sub_items": []
+        }
+      ]
+    },
+    "P1CRANE": {
+      "name": "P1CRANE",
+      "type": "Bulanan",
+      "items": [
+        {
+          "no": 1,
+          "category": null,
+          "name": "Periksa lemari kabinet",
+          "description": null,
+          "sub_items": []
+        },
+        {
+          "no": 2,
+          "category": null,
+          "name": "Periksa baterai dan saklar utama",
+          "description": null,
+          "sub_items": []
+        },
+        {
+          "no": 3,
+          "category": null,
+          "name": "Periksa fasilitas pelindung beban lebih",
+          "description": null,
+          "sub_items": []
+        },
+        {
+          "no": 4,
+          "category": null,
+          "name": "Periksa penerangan",
+          "description": null,
+          "sub_items": []
+        },
+        {
+          "no": 5,
+          "category": null,
+          "name": "Periksa kamera video",
+          "description": null,
+          "sub_items": []
+        },
+        {
+          "no": 6,
+          "category": null,
+          "name": "Periksa layar monitor",
+          "description": null,
+          "sub_items": []
+        },
+        {
+          "no": 7,
+          "category": null,
+          "name": "Periksa kabel drum pada boom",
+          "description": null,
+          "sub_items": []
+        },
+        {
+          "no": 8,
+          "category": null,
+          "name": "Periksa kabel drum pada counterweight",
+          "description": null,
+          "sub_items": []
+        },
+        {
+          "no": 9,
+          "category": null,
+          "name": "Periksa hoist limit switch",
+          "description": null,
+          "sub_items": []
+        },
+        {
+          "no": 10,
+          "category": null,
+          "name": "Periksa tombol pemberhenti darurat",
+          "description": null,
+          "sub_items": []
+        },
+        {
+          "no": 11,
+          "category": null,
+          "name": "Periksa kondisi fuse",
+          "description": "Berfungsi",
+          "sub_items": []
+        },
+        {
+          "no": 12,
+          "category": null,
+          "name": "Bersihkan bateray switch",
+          "description": "Bersih",
+          "sub_items": []
+        },
+        {
+          "no": 1,
+          "category": null,
+          "name": "Periksa lampu kontrol",
+          "description": null,
+          "sub_items": []
+        },
+        {
+          "no": 2,
+          "category": null,
+          "name": "Periksa lampu Boom",
+          "description": null,
+          "sub_items": []
+        },
+        {
+          "no": 3,
+          "category": null,
+          "name": "Periksa lampu Penerangan luar",
+          "description": null,
+          "sub_items": []
+        },
+        {
+          "no": 4,
+          "category": null,
+          "name": "Periksa lampu Sorot Ujung 1, 2",
+          "description": null,
+          "sub_items": []
+        },
+        {
+          "no": 5,
+          "category": null,
+          "name": "Periksa lampu instrument",
+          "description": null,
+          "sub_items": []
+        },
+        {
+          "no": 6,
+          "category": null,
+          "name": "Periksa lampu kabin",
+          "description": null,
+          "sub_items": []
+        },
+        {
+          "no": 7,
+          "category": null,
+          "name": "Periksa lampu Telescopic",
+          "description": null,
+          "sub_items": []
+        },
+        {
+          "no": 8,
+          "category": null,
+          "name": "Periksa lampu ruang mesin",
+          "description": null,
+          "sub_items": []
+        },
+        {
+          "no": 9,
+          "category": null,
+          "name": "Pada keadaan motor diesel hidup lampu merah indikator (Control Engine) harus tidak menyala",
+          "description": null,
+          "sub_items": []
+        },
+        {
+          "no": 1,
+          "category": null,
+          "name": "Periksa tangki fluida hidrolik",
+          "description": "Baik",
+          "sub_items": []
+        },
+        {
+          "no": 2,
+          "category": null,
+          "name": "Sistem pompa :",
+          "description": null,
+          "sub_items": [
+            {
+              "name": "- Periksa Kopling",
+              "description": "Baik berfungsi"
+            },
+            {
+              "name": "- Periksa Transfer case",
+              "description": "Baik berfungsi"
+            },
+            {
+              "name": "- Periksa Pompa hidrolik utama",
+              "description": "Baik berfungsi"
+            }
+          ]
+        },
+        {
+          "no": 3,
+          "category": null,
+          "name": "Periksa unit pompa darurat",
+          "description": "Baik berfungsi",
+          "sub_items": []
+        },
+        {
+          "no": 4,
+          "category": null,
+          "name": "Periksa valve block pada rangka atas",
+          "description": "Baik berfungsi",
+          "sub_items": []
+        },
+        {
+          "no": 5,
+          "category": null,
+          "name": "Periksa valve block pada rangka bawah",
+          "description": "Baik berfungsi",
+          "sub_items": []
+        },
+        {
+          "no": 6,
+          "category": null,
+          "name": "Periksa spring suspension and blocking rangka bawah",
+          "description": "Baik berfungsi",
+          "sub_items": []
+        },
+        {
+          "no": 7,
+          "category": null,
+          "name": "Periksa counterweight telescope",
+          "description": "Baik berfungsi",
+          "sub_items": []
+        },
+        {
+          "no": 8,
+          "category": null,
+          "name": "Periksa telescopic boom",
+          "description": "Baik berfungsi",
+          "sub_items": []
+        },
+        {
+          "no": 9,
+          "category": null,
+          "name": "Periksa silinder boom",
+          "description": "Baik berfungsi",
+          "sub_items": []
+        },
+        {
+          "no": 10,
+          "category": null,
+          "name": "Periksa mekanisme pengunci rangka atas",
+          "description": "Baik berfungsi",
+          "sub_items": []
+        },
+        {
+          "no": 11,
+          "category": null,
+          "name": "Periksa propping system",
+          "description": "Baik berfungsi",
+          "sub_items": []
+        },
+        {
+          "no": 12,
+          "category": null,
+          "name": "Periksa selang flexible dan pipa hidrolik",
+          "description": "Baik",
+          "sub_items": []
+        },
+        {
+          "no": 13,
+          "category": null,
+          "name": "Periksa rotary leadthrought",
+          "description": "Baik",
+          "sub_items": []
+        },
+        {
+          "no": 1,
+          "category": null,
+          "name": "Periksa kondisi kompresor",
+          "description": "Baik berfungsi",
+          "sub_items": []
+        },
+        {
+          "no": 2,
+          "category": null,
+          "name": "Periksa pengering udara bertekanan, perangkat pengatur tekanan",
+          "description": "Berfungsi",
+          "sub_items": []
+        },
+        {
+          "no": 2,
+          "category": null,
+          "name": "Periksa sistem rem pelayanan",
+          "description": "Berfungsi",
+          "sub_items": []
+        },
+        {
+          "no": 3,
+          "category": null,
+          "name": "Periksa kondisi selang flexible dan pipa angin",
+          "description": "Baik",
+          "sub_items": []
+        },
+        {
+          "no": 4,
+          "category": null,
+          "name": "Periksa valve blocking",
+          "description": "Berfungsi",
+          "sub_items": []
+        },
+        {
+          "no": 5,
+          "category": null,
+          "name": "Periksa klakson (horn)",
+          "description": "Berfungsi",
+          "sub_items": []
+        },
+        {
+          "no": 1,
+          "category": null,
+          "name": "Periksa kondisi minyak pelumas dan ganti jika hours base sudah mencapai 250/500 jam",
+          "description": null,
+          "sub_items": []
+        },
+        {
+          "no": 2,
+          "category": null,
+          "name": "Periksa filter separator bahan bakar ganti jika hours base sudah mencapai 250/500 jam",
+          "description": "Bersihkan/ganti",
+          "sub_items": []
+        },
+        {
+          "no": 2,
+          "category": null,
+          "name": "Periksa kondisi air pendingin",
+          "description": null,
+          "sub_items": []
+        },
+        {
+          "no": 3,
+          "category": null,
+          "name": "Periksa penutup air pendingin",
+          "description": null,
+          "sub_items": []
+        },
+        {
+          "no": 4,
+          "category": null,
+          "name": "Bahan bakar",
+          "description": "Bersihkan/ganti",
+          "sub_items": []
+        },
+        {
+          "no": 5,
+          "category": null,
+          "name": "Minyak Transmisi",
+          "description": null,
+          "sub_items": []
+        },
+        {
+          "no": 6,
+          "category": null,
+          "name": "Periksa keterfungsian mesin diesel darurat",
+          "description": null,
+          "sub_items": []
+        },
+        {
+          "no": 7,
+          "category": null,
+          "name": "Periksa / kencangkan dudukan Motor diesel",
+          "description": "Lengkap dan kencang",
+          "sub_items": []
+        },
+        {
+          "no": 1,
+          "category": null,
+          "name": "Tangki angin",
+          "description": "Kg/cm2",
+          "sub_items": []
+        },
+        {
+          "no": 2,
+          "category": null,
+          "name": "Angin Abar",
+          "description": "Kg/cm2",
+          "sub_items": []
+        },
+        {
+          "no": 3,
+          "category": null,
+          "name": "Tekanan minyak pelumas hidrolik",
+          "description": "Kg/cm2",
+          "sub_items": [
+            {
+              "name": "Periksa lampu indikator",
+              "description": "Berfungsi"
+            }
+          ]
+        },
+        {
+          "no": 4,
+          "category": null,
+          "name": "Periksa putaran motor diesel",
+          "description": null,
+          "sub_items": [
+            {
+              "name": "- Putaran Idle",
+              "description": "Rpm"
+            },
+            {
+              "name": "- Putaran  Max",
+              "description": "Rpm"
+            }
+          ]
+        },
+        {
+          "no": 5,
+          "category": null,
+          "name": "Periksa suhu air pendingin",
+          "description": "°C",
+          "sub_items": []
+        },
+        {
+          "no": 6,
+          "category": null,
+          "name": "Periksa isi bahan bakar",
+          "description": "liter",
+          "sub_items": []
+        },
+        {
+          "no": 7,
+          "category": null,
+          "name": "Periksa Ampere meter",
+          "description": "Ampere",
+          "sub_items": []
+        },
+        {
+          "no": 8,
+          "category": null,
+          "name": "Periksa Voltage meter",
+          "description": "Volt",
+          "sub_items": []
+        },
+        {
+          "no": 9,
+          "category": null,
+          "name": "Periksa kabin operator",
+          "description": null,
+          "sub_items": []
+        },
+        {
+          "no": 10,
+          "category": null,
+          "name": "Periksa tempat duduk",
+          "description": null,
+          "sub_items": []
+        },
+        {
+          "no": 11,
+          "category": null,
+          "name": "Periksa kondisi wiper dan washer",
+          "description": null,
+          "sub_items": []
+        },
+        {
+          "no": 12,
+          "category": null,
+          "name": "Periksa air washer",
+          "description": null,
+          "sub_items": []
+        },
+        {
+          "no": 13,
+          "category": null,
+          "name": "Periksa Lampu - lampu indikator",
+          "description": "Baik dan Nyala",
+          "sub_items": []
+        },
+        {
+          "no": 14,
+          "category": null,
+          "name": "Periksa penyejuk ruangan (AC)",
+          "description": null,
+          "sub_items": []
+        },
+        {
+          "no": 1,
+          "category": null,
+          "name": "Periksa rope pulley",
+          "description": "Baik",
+          "sub_items": []
+        },
+        {
+          "no": 2,
+          "category": null,
+          "name": "Periksa roda gigi pemutar",
+          "description": "Baik",
+          "sub_items": []
+        },
+        {
+          "no": 3,
+          "category": null,
+          "name": "Periksa hois Gear",
+          "description": "Baik",
+          "sub_items": []
+        },
+        {
+          "no": 4,
+          "category": null,
+          "name": "Periksa cylinder angkat penyeimbang",
+          "description": "Baik",
+          "sub_items": []
+        },
+        {
+          "no": 5,
+          "category": null,
+          "name": "Periksa motor penarik sling",
+          "description": "Baik",
+          "sub_items": []
+        },
+        {
+          "no": 6,
+          "category": null,
+          "name": "Periksa sling angkat",
+          "description": "Baik",
+          "sub_items": []
+        },
+        {
+          "no": 1,
+          "category": null,
+          "name": "Periksa kondisi boffer dan lumasi grease jika time hours base sudah tercapai 125jam",
+          "description": "Baik",
+          "sub_items": [
+            {
+              "name": "-Tinggi boffer",
+              "description": "mm"
+            }
+          ]
+        },
+        {
+          "no": 2,
+          "category": null,
+          "name": "Periksa kondisi Rantai pengaman",
+          "description": "Baik dan lengkap",
+          "sub_items": []
+        },
+        {
+          "no": 3,
+          "category": null,
+          "name": "Periksa sistem rem tangan",
+          "description": "Baik dan berfungsi",
+          "sub_items": []
+        },
+        {
+          "no": 4,
+          "category": null,
+          "name": "Periksa disk brake",
+          "description": "Baik dan berfungsi",
+          "sub_items": []
+        },
+        {
+          "no": 5,
+          "category": null,
+          "name": "Periksa bearing roda",
+          "description": "Baik",
+          "sub_items": []
+        },
+        {
+          "no": 6,
+          "category": null,
+          "name": "Periksa leap spring",
+          "description": "Baik dan lengkap",
+          "sub_items": []
+        },
+        {
+          "no": 7,
+          "category": null,
+          "name": "Periksa bogie  ( Frame Roda )",
+          "description": "Baik",
+          "sub_items": []
+        },
+        {
+          "no": 8,
+          "category": null,
+          "name": "Periksa motor penggerak roda",
+          "description": "Baik dan berfungsi",
+          "sub_items": []
+        },
+        {
+          "no": 9,
+          "category": null,
+          "name": "Periksa Flexible house",
+          "description": "Baik",
+          "sub_items": []
+        },
+        {
+          "no": 10,
+          "category": null,
+          "name": "Periksa traveling Gear",
+          "description": "Baik dan berfungsi",
+          "sub_items": []
+        },
+        {
+          "no": 11,
+          "category": null,
+          "name": "Periksa bekerjanya rem tangan",
+          "description": null,
+          "sub_items": []
+        },
+        {
+          "no": 12,
+          "category": null,
+          "name": "Periksa system blocking",
+          "description": "Baik",
+          "sub_items": []
+        },
+        {
+          "no": 13,
+          "category": null,
+          "name": "Buang air kondensasi dari tangki-tangki angin dan kondensasi kompressor",
+          "description": "baik dan kering",
+          "sub_items": []
+        },
+        {
+          "no": 14,
+          "category": null,
+          "name": "Periksa komponen pengereman dan flexible house",
+          "description": "Baik",
+          "sub_items": []
+        }
+      ]
+    },
+    "P6CRANE": {
+      "name": "P6CRANE",
+      "type": "Bulanan",
+      "items": [
+        {
+          "no": 1,
+          "category": null,
+          "name": "Periksa lemari kabinet",
+          "description": null,
+          "sub_items": []
+        },
+        {
+          "no": 2,
+          "category": null,
+          "name": "Periksa baterai dan saklar utama",
+          "description": null,
+          "sub_items": []
+        },
+        {
+          "no": 3,
+          "category": null,
+          "name": "Periksa fasilitas pelindung beban lebih",
+          "description": null,
+          "sub_items": []
+        },
+        {
+          "no": 4,
+          "category": null,
+          "name": "Periksa penerangan",
+          "description": null,
+          "sub_items": []
+        },
+        {
+          "no": 5,
+          "category": null,
+          "name": "Periksa kamera video",
+          "description": null,
+          "sub_items": []
+        },
+        {
+          "no": 6,
+          "category": null,
+          "name": "Periksa layar monitor",
+          "description": null,
+          "sub_items": []
+        },
+        {
+          "no": 7,
+          "category": null,
+          "name": "Periksa kabel drum pada boom",
+          "description": null,
+          "sub_items": []
+        },
+        {
+          "no": 8,
+          "category": null,
+          "name": "Periksa kabel drum pada counterweight",
+          "description": null,
+          "sub_items": []
+        },
+        {
+          "no": 9,
+          "category": null,
+          "name": "Periksa hoist limit switch",
+          "description": null,
+          "sub_items": []
+        },
+        {
+          "no": 10,
+          "category": null,
+          "name": "Periksa tombol pemberhenti darurat",
+          "description": null,
+          "sub_items": []
+        },
+        {
+          "no": 11,
+          "category": null,
+          "name": "Periksa system selenoid",
+          "description": null,
+          "sub_items": []
+        },
+        {
+          "no": 12,
+          "category": null,
+          "name": "Periksa kondisi fuse",
+          "description": null,
+          "sub_items": []
+        },
+        {
+          "no": 13,
+          "category": null,
+          "name": "Bersihkan bateray switch",
+          "description": null,
+          "sub_items": []
+        },
+        {
+          "no": 1,
+          "category": null,
+          "name": "Periksa lampu kontrol",
+          "description": null,
+          "sub_items": []
+        },
+        {
+          "no": 2,
+          "category": null,
+          "name": "Periksa lampu Boom",
+          "description": null,
+          "sub_items": []
+        },
+        {
+          "no": 3,
+          "category": null,
+          "name": "Periksa lampu Penerangan luar",
+          "description": null,
+          "sub_items": []
+        },
+        {
+          "no": 4,
+          "category": null,
+          "name": "Periksa lampu Sorot Ujung 1, 2",
+          "description": null,
+          "sub_items": []
+        },
+        {
+          "no": 5,
+          "category": null,
+          "name": "Periksa lampu instrument",
+          "description": null,
+          "sub_items": []
+        },
+        {
+          "no": 6,
+          "category": null,
+          "name": "Periksa lampu kabin",
+          "description": null,
+          "sub_items": []
+        },
+        {
+          "no": 7,
+          "category": null,
+          "name": "Periksa lampu Telescopic",
+          "description": null,
+          "sub_items": []
+        },
+        {
+          "no": 8,
+          "category": null,
+          "name": "Periksa lampu ruang mesin",
+          "description": null,
+          "sub_items": []
+        },
+        {
+          "no": 9,
+          "category": null,
+          "name": "Pada keadaan motor diesel hidup lampu merah          indikator (Control Engine) harus tidak menyala",
+          "description": null,
+          "sub_items": []
+        },
+        {
+          "no": 1,
+          "category": null,
+          "name": "Periksa tangki fluida hidrolik",
+          "description": "Baik",
+          "sub_items": []
+        },
+        {
+          "no": 2,
+          "category": null,
+          "name": "Sistem pompa :",
+          "description": null,
+          "sub_items": []
+        },
+        {
+          "no": 3,
+          "category": null,
+          "name": "Periksa unit pompa darurat",
+          "description": null,
+          "sub_items": []
+        },
+        {
+          "no": 4,
+          "category": null,
+          "name": "Periksa valve block pada rangka atas",
+          "description": null,
+          "sub_items": []
+        },
+        {
+          "no": 5,
+          "category": null,
+          "name": "Periksa valve block pada rangka bawah",
+          "description": null,
+          "sub_items": []
+        },
+        {
+          "no": 6,
+          "category": null,
+          "name": "Periksa spring suspension and blocking rangka bawah",
+          "description": null,
+          "sub_items": []
+        },
+        {
+          "no": 7,
+          "category": null,
+          "name": "Periksa counterweight telescope",
+          "description": null,
+          "sub_items": []
+        },
+        {
+          "no": 8,
+          "category": null,
+          "name": "Periksa telescopic boom",
+          "description": null,
+          "sub_items": []
+        },
+        {
+          "no": 9,
+          "category": null,
+          "name": "Periksa silinder boom",
+          "description": null,
+          "sub_items": []
+        },
+        {
+          "no": 10,
+          "category": null,
+          "name": "Periksa mekanisme pengunci rangka atas",
+          "description": null,
+          "sub_items": []
+        },
+        {
+          "no": 11,
+          "category": null,
+          "name": "Periksa propping system",
+          "description": null,
+          "sub_items": []
+        },
+        {
+          "no": 12,
+          "category": null,
+          "name": "Periksa kondisi selang flexible dan pipa hidrolik",
+          "description": "Baik/ganti",
+          "sub_items": []
+        },
+        {
+          "no": 13,
+          "category": null,
+          "name": "Periksa rotary leadthrought",
+          "description": null,
+          "sub_items": []
+        },
+        {
+          "no": 14,
+          "category": null,
+          "name": "Periksa volume minyak pelumas hidrolik dan ganti  jika hours base sudah tercapai 500 jam",
+          "description": "Ganti/tambah",
+          "sub_items": []
+        },
+        {
+          "no": 1,
+          "category": null,
+          "name": "Periksa kondisi kompresor",
+          "description": "Baik",
+          "sub_items": [
+            {
+              "name": "- Periksa volume pelumas dan ganti jika hour base tercapai 250 jam",
+              "description": "Tambah/ganti"
+            }
+          ]
+        },
+        {
+          "no": 2,
+          "category": null,
+          "name": "Periksa pengering udara bertekanan, perangkat pengatur tekanan",
+          "description": null,
+          "sub_items": []
+        },
+        {
+          "no": 3,
+          "category": null,
+          "name": "Periksa sistem rem pelayanan",
+          "description": null,
+          "sub_items": []
+        },
+        {
+          "no": 3,
+          "category": null,
+          "name": "Periksa selang flexible dan pipa angin",
+          "description": null,
+          "sub_items": []
+        },
+        {
+          "no": 4,
+          "category": null,
+          "name": "Periksa valve blocking",
+          "description": null,
+          "sub_items": []
+        },
+        {
+          "no": 5,
+          "category": null,
+          "name": "Periksa klakson (horn)",
+          "description": null,
+          "sub_items": []
+        },
+        {
+          "no": 1,
+          "category": null,
+          "name": "Periksa kondisi minyak pelumas dan ganti jika hours base sudah tercapai 250/500 jam",
+          "description": "Ganti/tambah",
+          "sub_items": []
+        },
+        {
+          "no": 2,
+          "category": null,
+          "name": "Periksa filter separator bahan bakar ganti jika hours base sudah tercapai 250/500 jam",
+          "description": "Ganti / Bersihkan",
+          "sub_items": []
+        },
+        {
+          "no": 3,
+          "category": null,
+          "name": "Periksa kondisi air pendingin",
+          "description": "cukup / Full",
+          "sub_items": []
+        },
+        {
+          "no": 4,
+          "category": null,
+          "name": "Periksa penutup air pendingin",
+          "description": "Baik",
+          "sub_items": []
+        },
+        {
+          "no": 5,
+          "category": null,
+          "name": "Bahan bakar",
+          "description": null,
+          "sub_items": [
+            {
+              "name": "- Periksa saringan bahan bakar dan ganti jika hours base sudah tercapai 250/500 jam",
+              "description": "Baik dan Bersih"
+            }
+          ]
+        },
+        {
+          "no": 5,
+          "category": null,
+          "name": "Minyak Transmisi",
+          "description": null,
+          "sub_items": [
+            {
+              "name": "- Periksa / tambah minyak Transmisi di peti roda gigi dan ganti jika hours base sudah tercapai 500 jam",
+              "description": "Tambah / Ganti"
+            }
+          ]
+        },
+        {
+          "no": 6,
+          "category": null,
+          "name": "Periksa mesin diesel darurat",
+          "description": "Baik dan Berfungsi",
+          "sub_items": []
+        },
+        {
+          "no": 7,
+          "category": null,
+          "name": "Periksa sistem pembuangan gas buang",
+          "description": "Baik dan berfungsi",
+          "sub_items": []
+        },
+        {
+          "no": 8,
+          "category": null,
+          "name": "Periksa / kencangkan dudukan Motor diesel",
+          "description": "Baik dan kencang",
+          "sub_items": []
+        },
+        {
+          "no": 9,
+          "category": null,
+          "name": "Ganti filter minyak pelumas jika hours base sudah tercapai 250/500 jam",
+          "description": "Tambah / Ganti",
+          "sub_items": []
+        },
+        {
+          "no": 10,
+          "category": null,
+          "name": "Bersihkan oil badluchfilter dan ganti jika hours base sudah tercapai 250/500 jam",
+          "description": "Bersihkan / Ganti",
+          "sub_items": []
+        },
+        {
+          "no": 11,
+          "category": null,
+          "name": "Flushing tangki bahan bakar jika hours base sudah tercapai 500 jam",
+          "description": "Diflushing",
+          "sub_items": []
+        },
+        {
+          "no": 12,
+          "category": null,
+          "name": "Bersihkan saringan udara / ganti jika hours base sudah tercapai 500 jam",
+          "description": "Bersihkan / Ganti",
+          "sub_items": []
+        },
+        {
+          "no": 13,
+          "category": null,
+          "name": "Periksa katup - katup motor diesel dan stel jika diperlukan",
+          "description": "Baik dan Periksa",
+          "sub_items": []
+        },
+        {
+          "no": 1,
+          "category": null,
+          "name": "Tangki angin",
+          "description": "Kg/cm2",
+          "sub_items": []
+        },
+        {
+          "no": 2,
+          "category": null,
+          "name": "Angin Abar",
+          "description": "Kg/cm2",
+          "sub_items": []
+        },
+        {
+          "no": 3,
+          "category": null,
+          "name": "Tekanan minyak pelumas hidrolik",
+          "description": "Kg/cm2",
+          "sub_items": [
+            {
+              "name": "Periksa lampu indikator",
+              "description": "Berfungsi"
+            }
+          ]
+        },
+        {
+          "no": 4,
+          "category": null,
+          "name": "Periksa putaran motor diesel",
+          "description": null,
+          "sub_items": [
+            {
+              "name": "- Putaran Idle",
+              "description": "Rpm"
+            },
+            {
+              "name": "- Putaran  Max",
+              "description": "Rpm"
+            }
+          ]
+        },
+        {
+          "no": 5,
+          "category": null,
+          "name": "Periksa suhu air pendingin",
+          "description": "°C",
+          "sub_items": []
+        },
+        {
+          "no": 6,
+          "category": null,
+          "name": "Periksa isi bahan bakar",
+          "description": "liter",
+          "sub_items": []
+        },
+        {
+          "no": 7,
+          "category": null,
+          "name": "Periksa Ampere meter",
+          "description": "Ampere",
+          "sub_items": []
+        },
+        {
+          "no": 8,
+          "category": null,
+          "name": "Periksa Voltage meter",
+          "description": "Volt",
+          "sub_items": []
+        },
+        {
+          "no": 9,
+          "category": null,
+          "name": "Periksa kabin operator",
+          "description": null,
+          "sub_items": []
+        },
+        {
+          "no": 10,
+          "category": null,
+          "name": "Periksa tempat duduk",
+          "description": null,
+          "sub_items": []
+        },
+        {
+          "no": 11,
+          "category": null,
+          "name": "Periksa kondisi wiper dan washer",
+          "description": null,
+          "sub_items": []
+        },
+        {
+          "no": 12,
+          "category": null,
+          "name": "Periksa air washer",
+          "description": null,
+          "sub_items": []
+        },
+        {
+          "no": 13,
+          "category": null,
+          "name": "Periksa Lampu - lampu indikator",
+          "description": "Baik dan Nyala",
+          "sub_items": []
+        },
+        {
+          "no": 14,
+          "category": null,
+          "name": "Periksa penyejuk ruangan (AC)",
+          "description": null,
+          "sub_items": []
+        },
+        {
+          "no": 1,
+          "category": null,
+          "name": "Periksa rope pulley",
+          "description": "Baik",
+          "sub_items": []
+        },
+        {
+          "no": 2,
+          "category": null,
+          "name": "Periksa roda gigi pemutar",
+          "description": "Baik",
+          "sub_items": []
+        },
+        {
+          "no": 3,
+          "category": null,
+          "name": "Periksa hois Gear",
+          "description": "Baik",
+          "sub_items": []
+        },
+        {
+          "no": 4,
+          "category": null,
+          "name": "Periksa cylinder angkat penyeimbang",
+          "description": "Baik",
+          "sub_items": []
+        },
+        {
+          "no": 5,
+          "category": null,
+          "name": "Periksa motor penarik sling",
+          "description": "Baik",
+          "sub_items": []
+        },
+        {
+          "no": 6,
+          "category": null,
+          "name": "Periksa sling angkat",
+          "description": "Baik",
+          "sub_items": []
+        },
+        {
+          "no": 1,
+          "category": null,
+          "name": "Periksa kondisi boffer dan lumasi grease jika hours base sudah tercapai 125jam",
+          "description": "Baik",
+          "sub_items": [
+            {
+              "name": "-Tinggi boffer",
+              "description": "mm"
+            }
+          ]
+        },
+        {
+          "no": 2,
+          "category": null,
+          "name": "Periksa kondisi Rantai pengaman",
+          "description": "Baik dan lengkap",
+          "sub_items": []
+        },
+        {
+          "no": 3,
+          "category": null,
+          "name": "Periksa sistem rem tangan",
+          "description": "Baik dan berfungsi",
+          "sub_items": []
+        },
+        {
+          "no": 4,
+          "category": null,
+          "name": "Periksa disk brake",
+          "description": "Baik dan berfungsi",
+          "sub_items": []
+        },
+        {
+          "no": 5,
+          "category": null,
+          "name": "Periksa bearing roda",
+          "description": "Baik",
+          "sub_items": []
+        },
+        {
+          "no": 6,
+          "category": null,
+          "name": "Periksa leap spring",
+          "description": "Baik dan lengkap",
+          "sub_items": []
+        },
+        {
+          "no": 7,
+          "category": null,
+          "name": "Periksa bogie  ( Frame Roda )",
+          "description": "Baik",
+          "sub_items": []
+        },
+        {
+          "no": 8,
+          "category": null,
+          "name": "Periksa motor penggerak roda",
+          "description": "Baik dan berfungsi",
+          "sub_items": []
+        },
+        {
+          "no": 9,
+          "category": null,
+          "name": "Periksa Flexible house",
+          "description": "Baik",
+          "sub_items": []
+        },
+        {
+          "no": 10,
+          "category": null,
+          "name": "Periksa traveling Gear",
+          "description": "Baik dan berfungsi",
+          "sub_items": []
+        },
+        {
+          "no": 11,
+          "category": null,
+          "name": "Periksa bekerjanya rem tangan",
+          "description": null,
+          "sub_items": []
+        },
+        {
+          "no": 12,
+          "category": null,
+          "name": "Periksa system blocking",
+          "description": "Baik",
+          "sub_items": []
+        },
+        {
+          "no": 13,
+          "category": null,
+          "name": "Buang air kondesasi dari tangki-tangki angin dan kondensasi kompressor",
+          "description": "baik dan kering",
+          "sub_items": []
+        },
+        {
+          "no": 14,
+          "category": null,
+          "name": "Periksa komponen pengereman dan flexible house",
+          "description": "Baik",
+          "sub_items": []
+        }
+      ]
+    }
+  }
+}

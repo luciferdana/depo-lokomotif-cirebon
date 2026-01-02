@@ -1,0 +1,668 @@
+{
+  "id": "overhead-crane-5ton",
+  "name": "OVERHEAD CRANE 5TON",
+  "code": "OVERHEADCRANE5TON",
+  "category": "Heavy Equipment",
+  "location": "Depo Lokomotif Cirebon",
+  "status": "Aktif",
+  "sheets": [
+    "(PH) SHEET 1",
+    "(PH) SHEET 2",
+    "(P1) SHEET 1",
+    "(P1) SHEET 2",
+    "(P1) SHEET 3"
+  ],
+  "checksheet_templates": {
+    "(PH) SHEET 1": {
+      "name": "(PH) SHEET 1",
+      "type": "Harian",
+      "items": [
+        {
+          "no": 1,
+          "category": "MECHANICAL (END CARRIAGE)",
+          "name": "Brake",
+          "description": null,
+          "sub_items": [
+            {
+              "name": "a. Kampas",
+              "description": "Pengukuran maksimum toleransi"
+            },
+            {
+              "name": "b. Disk Brake",
+              "description": "Check visual gear secara menyeluruh, tidak ada kerusakan"
+            },
+            {
+              "name": "c. Spring",
+              "description": "Check visual gear secara menyeluruh, tidak ada kerusakan"
+            }
+          ]
+        },
+        {
+          "no": 2,
+          "category": "MECHANICAL (END CARRIAGE)",
+          "name": "Clening",
+          "description": "Bersihkan unit dan area kerja",
+          "sub_items": []
+        },
+        {
+          "no": 1,
+          "category": "MECHANICAL (WIRE ROPE HOIST)",
+          "name": "Wire Rope",
+          "description": null,
+          "sub_items": [
+            {
+              "name": "a. Broken Wire",
+              "description": "Check dan pastikan tidak ada kerusakan"
+            },
+            {
+              "name": "b. Rope",
+              "description": "Check dan pastikan tidak ada kerusakan dan karat pada tali"
+            }
+          ]
+        },
+        {
+          "no": 2,
+          "category": "MECHANICAL (WIRE ROPE HOIST)",
+          "name": "Rope Guide",
+          "description": "Periksa secara visual, tidak ada kerusakan dan kencangkan baut",
+          "sub_items": []
+        },
+        {
+          "no": 3,
+          "category": "MECHANICAL (WIRE ROPE HOIST)",
+          "name": "Flange Bearing",
+          "description": "Running test",
+          "sub_items": []
+        },
+        {
+          "no": 4,
+          "category": "MECHANICAL (WIRE ROPE HOIST)",
+          "name": "Safety latch",
+          "description": "Check secara menyeluruh dan fungsikan",
+          "sub_items": []
+        },
+        {
+          "no": 1,
+          "category": "ELECTRICAL (WIRE ROPE HOIST)",
+          "name": "Hoist Motor",
+          "description": null,
+          "sub_items": [
+            {
+              "name": "d. Rectifier",
+              "description": "Pengukuran voltage"
+            }
+          ]
+        },
+        {
+          "no": 2,
+          "category": "ELECTRICAL (WIRE ROPE HOIST)",
+          "name": "Cross Motor",
+          "description": null,
+          "sub_items": [
+            {
+              "name": "d. Rectifier",
+              "description": "Pengukuran voltage"
+            }
+          ]
+        },
+        {
+          "no": 3,
+          "category": "ELECTRICAL (WIRE ROPE HOIST)",
+          "name": "Brake Motor Hoist",
+          "description": null,
+          "sub_items": [
+            {
+              "name": "a. Insulation test",
+              "description": "Ukur tahanan isolasi"
+            },
+            {
+              "name": "b. Ampere",
+              "description": "Ukur arus listrik"
+            }
+          ]
+        },
+        {
+          "no": 4,
+          "category": "ELECTRICAL (WIRE ROPE HOIST)",
+          "name": "Brake Motor Cross",
+          "description": null,
+          "sub_items": [
+            {
+              "name": "a. Insulation test",
+              "description": "Ukur tahanan isolasi"
+            },
+            {
+              "name": "b. Ampere",
+              "description": "Ukur arus listrik"
+            }
+          ]
+        },
+        {
+          "no": 5,
+          "category": "ELECTRICAL (WIRE ROPE HOIST)",
+          "name": "Panel Hoist",
+          "description": null,
+          "sub_items": [
+            {
+              "name": "a. Ternination Connection",
+              "description": "Check dan kencangkan baut koneksi"
+            },
+            {
+              "name": "b. Evaluation Device",
+              "description": "Pencatatan waktu hoist"
+            }
+          ]
+        },
+        {
+          "no": 6,
+          "category": "ELECTRICAL (WIRE ROPE HOIST)",
+          "name": "Cleaning",
+          "description": "Bersihkan unit dan area kerja",
+          "sub_items": []
+        },
+        {
+          "no": 1,
+          "category": "MECHANICAL (CRANE ELECTRICAL)",
+          "name": "Festoon system (tray-trolley)",
+          "description": "Check dan fungsikan",
+          "sub_items": []
+        },
+        {
+          "no": 2,
+          "category": "MECHANICAL (CRANE ELECTRICAL)",
+          "name": "Power Raill Conductor",
+          "description": null,
+          "sub_items": [
+            {
+              "name": "a. System Support",
+              "description": "Periksa secara visual"
+            },
+            {
+              "name": "b. Join Connection",
+              "description": "Pengencangan joint"
+            }
+          ]
+        },
+        {
+          "no": 3,
+          "category": "MECHANICAL (CRANE ELECTRICAL)",
+          "name": "Bridge Panel",
+          "description": "Check dan kencangkan baut koneksi",
+          "sub_items": []
+        }
+      ]
+    },
+    "(PH) SHEET 2": {
+      "name": "(PH) SHEET 2",
+      "type": "Harian",
+      "items": [
+        {
+          "no": 1,
+          "category": "ELECTRICAL (CRANE ELECTRICAL)",
+          "name": "Emergency Push Button",
+          "description": null,
+          "sub_items": []
+        },
+        {
+          "no": 2,
+          "category": "ELECTRICAL (CRANE ELECTRICAL)",
+          "name": "Pendant Cable",
+          "description": "Check secara menyeluruh dan fungsikan",
+          "sub_items": []
+        },
+        {
+          "no": 3,
+          "category": "ELECTRICAL (CRANE ELECTRICAL)",
+          "name": "Rotary Lamp",
+          "description": "Check secara menyeluruh dan fungsikan",
+          "sub_items": []
+        },
+        {
+          "no": 4,
+          "category": "ELECTRICAL (CRANE ELECTRICAL)",
+          "name": "Warning Horn",
+          "description": "Check secara menyeluruh dan fungsikan",
+          "sub_items": []
+        },
+        {
+          "no": 5,
+          "category": "ELECTRICAL (CRANE ELECTRICAL)",
+          "name": "Clening",
+          "description": "Bersihkan unit dan area kerja",
+          "sub_items": []
+        }
+      ]
+    },
+    "(P1) SHEET 1": {
+      "name": "(P1) SHEET 1",
+      "type": "Bulanan",
+      "items": [
+        {
+          "no": 1,
+          "category": "MECHANICAL (END CARRIAGE)",
+          "name": "Drive Wheel:",
+          "description": null,
+          "sub_items": [
+            {
+              "name": "a. Roda",
+              "description": "Tidak aus dan tidak retak"
+            },
+            {
+              "name": "b. Flange roda",
+              "description": "Ukur flange wheel pengukuran masksimum toleransi"
+            },
+            {
+              "name": "c. Hole and Shaft",
+              "description": "Ukur hole and shaft pengukuran maksimum toleransi"
+            },
+            {
+              "name": "d. Bearing",
+              "description": "Lakukan running test dan noice"
+            }
+          ]
+        },
+        {
+          "no": 2,
+          "category": "MECHANICAL (END CARRIAGE)",
+          "name": "Plain wheel:",
+          "description": null,
+          "sub_items": [
+            {
+              "name": "a. Roda",
+              "description": "Tidak aus dan tidak retak"
+            },
+            {
+              "name": "b. Flange roda",
+              "description": "Ukur flange wheel pengukuran maksimum toleransi"
+            },
+            {
+              "name": "c. Bearing",
+              "description": "Lakukan running test dan noice"
+            }
+          ]
+        },
+        {
+          "no": 3,
+          "category": "MECHANICAL (END CARRIAGE)",
+          "name": "Gear box motor:",
+          "description": null,
+          "sub_items": [
+            {
+              "name": "a. Box motor",
+              "description": "Check visual gear secara menyeluruh, tidak ada kerusakan"
+            },
+            {
+              "name": "b. Oli / grease meter",
+              "description": "Check oli / grease meter"
+            }
+          ]
+        },
+        {
+          "no": 4,
+          "category": "MECHANICAL (END CARRIAGE)",
+          "name": "Brake:",
+          "description": null,
+          "sub_items": [
+            {
+              "name": "a. Kampas",
+              "description": "Pengukuran maksimum toleransi"
+            },
+            {
+              "name": "b. Disk brake",
+              "description": "Check visual gear secara meneyluruh, tidak ada kerusakan."
+            },
+            {
+              "name": "c. Spring",
+              "description": "Check visual gear secara meneyluruh, tidak ada kerusakan."
+            }
+          ]
+        },
+        {
+          "no": 5,
+          "category": "MECHANICAL (END CARRIAGE)",
+          "name": "Buffer/Stopper",
+          "description": null,
+          "sub_items": [
+            {
+              "name": "a. Karet",
+              "description": "Check visual gear secara meneyluruh, tidak ada kerusakan."
+            },
+            {
+              "name": "b. Bolt connection",
+              "description": "Check dan lakukan pengencangan baut"
+            }
+          ]
+        },
+        {
+          "no": 6,
+          "category": "MECHANICAL (END CARRIAGE)",
+          "name": "Joint ec with girder",
+          "description": "Check dan lakukan pengencangan baut",
+          "sub_items": []
+        },
+        {
+          "no": 1,
+          "category": "ELECTRICAL (END CARRIAGE)",
+          "name": "Motor EC",
+          "description": null,
+          "sub_items": [
+            {
+              "name": "a. Insulation test",
+              "description": "Ukur tahanan isolasi"
+            },
+            {
+              "name": "b. Ampere",
+              "description": "Ukur arus listrik"
+            }
+          ]
+        },
+        {
+          "no": 2,
+          "category": "ELECTRICAL (END CARRIAGE)",
+          "name": "Limit switch",
+          "description": "Check dan kencangkan baut koneksi",
+          "sub_items": [
+            {
+              "name": "a. Function",
+              "description": "Running test"
+            }
+          ]
+        },
+        {
+          "no": 3,
+          "category": "ELECTRICAL (END CARRIAGE)",
+          "name": "Cleaning",
+          "description": "Bersikan unit dan area kerja",
+          "sub_items": []
+        },
+        {
+          "no": 1,
+          "category": "MECHANICAL (WIRE ROPE HOIST)",
+          "name": "Wire rope",
+          "description": null,
+          "sub_items": [
+            {
+              "name": "a. Broken wire",
+              "description": "Check dan pastikan tidak ada kerusakan"
+            },
+            {
+              "name": "b. Rope",
+              "description": "Check dan pastikan tidak ada kerusakan dan karat pada tali"
+            }
+          ]
+        },
+        {
+          "no": 2,
+          "category": "MECHANICAL (WIRE ROPE HOIST)",
+          "name": "Wire drum",
+          "description": "Periksa dimensi wire drum, tidak ada kerusakan",
+          "sub_items": []
+        },
+        {
+          "no": 3,
+          "category": "MECHANICAL (WIRE ROPE HOIST)",
+          "name": "Rope anchored",
+          "description": "Periksa secara visual, tidak ada kerusakan",
+          "sub_items": []
+        },
+        {
+          "no": 4,
+          "category": "MECHANICAL (WIRE ROPE HOIST)",
+          "name": "Rope Guide",
+          "description": "Periksa secara visual, tidak ada kerusakan dan kencangkan baut",
+          "sub_items": []
+        }
+      ]
+    },
+    "(P1) SHEET 2": {
+      "name": "(P1) SHEET 2",
+      "type": "Bulanan",
+      "items": [
+        {
+          "no": 5,
+          "category": null,
+          "name": "Brake motor hoisting",
+          "description": null,
+          "sub_items": [
+            {
+              "name": "a. Kampas",
+              "description": "Pengukuran maksimum toleransi"
+            },
+            {
+              "name": "b. Disk brake",
+              "description": "Check visual gear secara menyeluruh, tidak ada kerusakan."
+            },
+            {
+              "name": "c. Spring",
+              "description": "Check visual gear secara menyeluruh, tidak ada kerusakan."
+            }
+          ]
+        },
+        {
+          "no": 6,
+          "category": null,
+          "name": "Brake motor cross",
+          "description": null,
+          "sub_items": [
+            {
+              "name": "a. Kampas",
+              "description": "Pengukuran maksimum toleransi"
+            },
+            {
+              "name": "b. Disk brake",
+              "description": "Check visual gear secara menyeluruh, tidak ada kerusakan."
+            },
+            {
+              "name": "c. Spring",
+              "description": "Check visual gear secara menyeluruh, tidak ada kerusakan."
+            }
+          ]
+        },
+        {
+          "no": 7,
+          "category": null,
+          "name": "Flange bearing",
+          "description": "Running test",
+          "sub_items": []
+        },
+        {
+          "no": 8,
+          "category": null,
+          "name": "Safety latch",
+          "description": "Check secara menyeluruh dan fungsikan",
+          "sub_items": []
+        },
+        {
+          "no": 9,
+          "category": null,
+          "name": "Buffer/Stopper",
+          "description": null,
+          "sub_items": [
+            {
+              "name": "a. Karet",
+              "description": "Check visual gear secara menyeluruh, tidak ada kerusakan."
+            },
+            {
+              "name": "b. Bolt connection",
+              "description": "Check dan lakukan pengencangan baut"
+            }
+          ]
+        },
+        {
+          "no": 1,
+          "category": "ELECTRICAL (WIRE ROPE HOIST)",
+          "name": "Hoist Motor",
+          "description": null,
+          "sub_items": [
+            {
+              "name": "a. Insulation test",
+              "description": "Ukur tahanan isolasi"
+            },
+            {
+              "name": "b. Ampere",
+              "description": "Ukur arus listrik"
+            },
+            {
+              "name": "c. Termination connection",
+              "description": "Check dan kencangan baut koneksi"
+            },
+            {
+              "name": "d. Rectifier",
+              "description": "Pengukuran voltage"
+            }
+          ]
+        },
+        {
+          "no": 2,
+          "category": "ELECTRICAL (WIRE ROPE HOIST)",
+          "name": "Cross motor",
+          "description": null,
+          "sub_items": [
+            {
+              "name": "a. Insulation test",
+              "description": "Ukur tahanan isolasi"
+            },
+            {
+              "name": "b. Ampere",
+              "description": "Ukur arus listrik"
+            },
+            {
+              "name": "c. Termination connection",
+              "description": "Check dan kencangan baut koneksi"
+            },
+            {
+              "name": "d. Rectifier",
+              "description": "Pengukuran voltage"
+            }
+          ]
+        },
+        {
+          "no": 3,
+          "category": "ELECTRICAL (WIRE ROPE HOIST)",
+          "name": "Brake motor hoist",
+          "description": null,
+          "sub_items": [
+            {
+              "name": "a. Insulation test",
+              "description": "Ukur tahanan isolasi"
+            },
+            {
+              "name": "b. Ampere",
+              "description": "Ukur arus listrik"
+            }
+          ]
+        },
+        {
+          "no": 4,
+          "category": "ELECTRICAL (WIRE ROPE HOIST)",
+          "name": "Brake motor cross",
+          "description": null,
+          "sub_items": [
+            {
+              "name": "a. Insulation test",
+              "description": "Ukur tahanan isolasi"
+            },
+            {
+              "name": "b. Ampere",
+              "description": "Ukur arus listrik"
+            }
+          ]
+        },
+        {
+          "no": 5,
+          "category": "ELECTRICAL (WIRE ROPE HOIST)",
+          "name": "Panel hoist",
+          "description": null,
+          "sub_items": [
+            {
+              "name": "a. Termination connection",
+              "description": "Check dan kencangarrbaut koneksi"
+            },
+            {
+              "name": "b. Evaluation device",
+              "description": "Pencatatan waktu hoist"
+            }
+          ]
+        },
+        {
+          "no": 6,
+          "category": "ELECTRICAL (WIRE ROPE HOIST)",
+          "name": "Cleaning",
+          "description": "Bersikan unit dan area kerja",
+          "sub_items": []
+        },
+        {
+          "no": 1,
+          "category": "MECHANICAL (CRANE ELECTRICAL)",
+          "name": "Festoon system (tray-trolley)",
+          "description": "Check dan fungsikan",
+          "sub_items": []
+        },
+        {
+          "no": 2,
+          "category": "MECHANICAL (CRANE ELECTRICAL)",
+          "name": "Power raill conduktor",
+          "description": null,
+          "sub_items": [
+            {
+              "name": "a. System support",
+              "description": "Periksa secara visual"
+            },
+            {
+              "name": "b. Join connection",
+              "description": "Pengencangan joint"
+            }
+          ]
+        },
+        {
+          "no": 3,
+          "category": "MECHANICAL (CRANE ELECTRICAL)",
+          "name": "Bridge panel",
+          "description": "Check dan kencangkan baut koneksi",
+          "sub_items": []
+        }
+      ]
+    },
+    "(P1) SHEET 3": {
+      "name": "(P1) SHEET 3",
+      "type": "Bulanan",
+      "items": [
+        {
+          "no": 1,
+          "category": "ELECTRICAL (CRANE ELECTRICAL)",
+          "name": "Emergency Push Button",
+          "description": null,
+          "sub_items": []
+        },
+        {
+          "no": 2,
+          "category": "ELECTRICAL (CRANE ELECTRICAL)",
+          "name": "Pendant Cable",
+          "description": "Check secara menyeluruh dan fungsikan",
+          "sub_items": []
+        },
+        {
+          "no": 3,
+          "category": "ELECTRICAL (CRANE ELECTRICAL)",
+          "name": "Rotary Lamp",
+          "description": "Check secara menyeluruh dan fungsikan",
+          "sub_items": []
+        },
+        {
+          "no": 4,
+          "category": "ELECTRICAL (CRANE ELECTRICAL)",
+          "name": "Warning Horn",
+          "description": "Check secara menyeluruh dan fungsikan",
+          "sub_items": []
+        },
+        {
+          "no": 5,
+          "category": "ELECTRICAL (CRANE ELECTRICAL)",
+          "name": "Clening",
+          "description": "Bersihkan unit dan area kerja",
+          "sub_items": []
+        }
+      ]
+    }
+  }
+}

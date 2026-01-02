@@ -23,6 +23,8 @@ const equipmentData: Record<string, any> = {
 
 interface ChecksheetItem {
     id: string
+    no: number
+    category: string
     name: string
     description: string
     status: 'ok' | 'nok' | null
@@ -39,6 +41,11 @@ interface Checksheet {
     progress: number
     description: string
     items?: ChecksheetItem[]
+    signatures?: {
+        pelaksana: string
+        pengawas: string
+        spv: string
+    }
 }
 
 export default function ChecksheetDetailPage() {
@@ -50,6 +57,12 @@ export default function ChecksheetDetailPage() {
     const [checksheet, setChecksheet] = useState<Checksheet | null>(null)
     const [items, setItems] = useState<ChecksheetItem[]>([])
     const [saving, setSaving] = useState(false)
+    const [expandedCategories, setExpandedCategories] = useState<Set<string>>(new Set())
+    const [signatures, setSignatures] = useState({
+        pelaksana: '',
+        pengawas: '',
+        spv: ''
+    })
 
     useEffect(() => {
         const session = getSession()
@@ -67,10 +80,16 @@ export default function ChecksheetDetailPage() {
 
             if (found) {
                 setChecksheet(found)
+                if (found.signatures) {
+                    setSignatures(found.signatures)
+                }
 
                 // Load saved items or create from template
                 if (found.items && found.items.length > 0) {
                     setItems(found.items)
+                    // Expand all categories by default
+                    const cats = new Set(found.items.map(i => i.category).filter(Boolean))
+                    setExpandedCategories(cats as Set<string>)
                 } else {
                     // Generate items from equipment template
                     const equipment = equipmentData[found.equipmentId]
@@ -81,30 +100,45 @@ export default function ChecksheetDetailPage() {
                             let itemIndex = 0
 
                             templateData.items.forEach((item: any) => {
+                                const category = item.category || 'Uncategorized'
+
                                 // Add main item
-                                generatedItems.push({
-                                    id: `item-${itemIndex++}`,
-                                    name: item.name || '',
-                                    description: item.description || '',
-                                    status: null,
-                                    keterangan: ''
-                                })
+                                if (item.name && item.name.trim() !== '') {
+                                    generatedItems.push({
+                                        id: `item-${itemIndex++}`,
+                                        no: item.no || itemIndex,
+                                        category: category,
+                                        name: item.name,
+                                        description: item.description || '',
+                                        status: null,
+                                        keterangan: ''
+                                    })
+                                }
 
                                 // Add sub-items
                                 if (item.sub_items && item.sub_items.length > 0) {
                                     item.sub_items.forEach((subItem: any) => {
-                                        generatedItems.push({
-                                            id: `item-${itemIndex++}`,
-                                            name: `  ${subItem.name}`,
-                                            description: subItem.description || '',
-                                            status: null,
-                                            keterangan: ''
-                                        })
+                                        if (subItem.name && subItem.name.trim() !== '') {
+                                            generatedItems.push({
+                                                id: `item-${itemIndex++}`,
+                                                no: item.no || 0,
+                                                category: category,
+                                                name: `${item.name} - ${subItem.name.replace(/^[a-z]\.\s*/i, '')}`,
+                                                description: subItem.description || '',
+                                                status: null,
+                                                keterangan: ''
+                                            })
+                                        }
                                     })
                                 }
                             })
 
-                            setItems(generatedItems.filter(i => i.name && i.name.trim() !== ''))
+                            const filteredItems = generatedItems.filter(i => i.name && i.name.trim() !== '')
+                            setItems(filteredItems)
+
+                            // Expand all categories by default
+                            const cats = new Set(filteredItems.map(i => i.category).filter(Boolean))
+                            setExpandedCategories(cats as Set<string>)
                         }
                     }
                 }
@@ -124,6 +158,18 @@ export default function ChecksheetDetailPage() {
         ))
     }
 
+    const toggleCategory = (category: string) => {
+        setExpandedCategories(prev => {
+            const newSet = new Set(prev)
+            if (newSet.has(category)) {
+                newSet.delete(category)
+            } else {
+                newSet.add(category)
+            }
+            return newSet
+        })
+    }
+
     const calculateProgress = () => {
         const totalItems = items.length
         const completedItems = items.filter(i => i.status !== null).length
@@ -140,7 +186,8 @@ export default function ChecksheetDetailPage() {
             ...checksheet,
             items,
             progress,
-            status: progress === 100 ? 'selesai' : 'progress'
+            status: progress === 100 ? 'selesai' : 'progress',
+            signatures
         }
 
         // Save to localStorage
@@ -167,117 +214,247 @@ export default function ChecksheetDetailPage() {
 
     const progress = calculateProgress()
 
+    // Group items by category
+    const categories = [...new Set(items.map(i => i.category).filter(Boolean))]
+
     return (
         <div className="dashboard-layout">
             <Sidebar user={user} dashboardTitle="Mechanic Dashboard" />
 
             <main className="main-content">
-                <header className="content-header">
-                    <div className="content-header-left">
-                        <h1>{checksheet.equipmentName}</h1>
-                        <p>Template: {checksheet.template} • {checksheet.date}</p>
-                    </div>
-                    <div className="content-header-right">
-                        <Link href="/mekanik/checksheet" className="btn btn-outline">← Kembali</Link>
-                        <button className="btn btn-primary" onClick={handleSave} disabled={saving}>
-                            {saving ? 'Menyimpan...' : 'Simpan Progress'}
-                        </button>
-                    </div>
-                </header>
+                {/* Header */}
+                <div style={{ padding: '1rem 2rem', borderBottom: '1px solid #e2e8f0', background: 'white' }}>
+                    <Link href="/mekanik/checksheet" style={{ color: '#3b82f6', textDecoration: 'none', fontSize: '0.875rem', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+                        ← Kembali ke Daftar
+                    </Link>
+                </div>
 
                 <div className="content-body">
-                    {/* Progress Card */}
-                    <div className="section-card">
-                        <div className="section-card-header">
-                            <h3 className="section-card-title">Progress Checksheet</h3>
-                            <span className="section-card-value">{progress}%</span>
+                    {/* Title Section */}
+                    <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: '1.5rem' }}>
+                        <div>
+                            <h1 style={{ fontSize: '1.5rem', fontWeight: '600', marginBottom: '0.25rem' }}>{checksheet.equipmentName}</h1>
+                            <p style={{ color: '#3b82f6', fontSize: '0.875rem' }}>Checksheet {checksheet.template} | {checksheet.date}</p>
                         </div>
-                        <div className="progress-bar">
-                            <div
-                                className={`progress-bar-fill ${progress === 100 ? 'green' : 'blue'}`}
-                                style={{ width: `${progress}%` }}
-                            ></div>
+                        <div style={{
+                            padding: '0.5rem 1rem',
+                            borderRadius: '8px',
+                            backgroundColor: progress === 100 ? '#dcfce7' : '#dbeafe',
+                            color: progress === 100 ? '#166534' : '#1e40af',
+                            fontWeight: '500',
+                            fontSize: '0.875rem'
+                        }}>
+                            Progress: {progress}%
                         </div>
-                        <p className="progress-text">
-                            {items.filter(i => i.status !== null).length} dari {items.length} item selesai dicek
-                        </p>
                     </div>
 
-                    {/* Checklist Items */}
-                    <div className="section-card">
-                        <h3 className="section-card-title" style={{ marginBottom: '1rem' }}>Daftar Pemeriksaan</h3>
-
-                        <div className="table-container">
-                            <table>
-                                <thead>
-                                    <tr>
-                                        <th style={{ width: '40px' }}>No</th>
-                                        <th>Nama Bagian</th>
-                                        <th>Uraian Pekerjaan</th>
-                                        <th style={{ width: '120px', textAlign: 'center' }}>Status</th>
-                                        <th style={{ width: '200px' }}>Keterangan</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    {items.map((item, index) => (
-                                        <tr key={item.id}>
-                                            <td>{index + 1}</td>
-                                            <td style={{ whiteSpace: 'pre-wrap' }}>{item.name}</td>
-                                            <td>{item.description}</td>
-                                            <td>
-                                                <div style={{ display: 'flex', gap: '0.5rem', justifyContent: 'center' }}>
-                                                    <button
-                                                        onClick={() => handleStatusChange(item.id, 'ok')}
-                                                        style={{
-                                                            padding: '0.25rem 0.75rem',
-                                                            borderRadius: '4px',
-                                                            border: 'none',
-                                                            cursor: 'pointer',
-                                                            backgroundColor: item.status === 'ok' ? '#22c55e' : '#e2e8f0',
-                                                            color: item.status === 'ok' ? 'white' : '#64748b',
-                                                            fontWeight: 500,
-                                                            fontSize: '0.75rem'
-                                                        }}
-                                                    >
-                                                        OK
-                                                    </button>
-                                                    <button
-                                                        onClick={() => handleStatusChange(item.id, 'nok')}
-                                                        style={{
-                                                            padding: '0.25rem 0.75rem',
-                                                            borderRadius: '4px',
-                                                            border: 'none',
-                                                            cursor: 'pointer',
-                                                            backgroundColor: item.status === 'nok' ? '#ef4444' : '#e2e8f0',
-                                                            color: item.status === 'nok' ? 'white' : '#64748b',
-                                                            fontWeight: 500,
-                                                            fontSize: '0.75rem'
-                                                        }}
-                                                    >
-                                                        N.OK
-                                                    </button>
-                                                </div>
-                                            </td>
-                                            <td>
-                                                <input
-                                                    type="text"
-                                                    placeholder="Keterangan..."
-                                                    value={item.keterangan}
-                                                    onChange={(e) => handleKeteranganChange(item.id, e.target.value)}
-                                                    style={{
-                                                        width: '100%',
-                                                        padding: '0.5rem',
-                                                        border: '1px solid #e2e8f0',
-                                                        borderRadius: '4px',
-                                                        fontSize: '0.875rem'
-                                                    }}
-                                                />
-                                            </td>
-                                        </tr>
-                                    ))}
-                                </tbody>
-                            </table>
+                    {/* Info Card */}
+                    <div className="section-card" style={{ marginBottom: '1.5rem' }}>
+                        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: '1.5rem' }}>
+                            <div>
+                                <p style={{ fontSize: '0.75rem', color: '#64748b', marginBottom: '0.25rem', textTransform: 'uppercase' }}>Equipment</p>
+                                <p style={{ fontWeight: '500' }}>{checksheet.equipmentName}</p>
+                            </div>
+                            <div>
+                                <p style={{ fontSize: '0.75rem', color: '#64748b', marginBottom: '0.25rem', textTransform: 'uppercase' }}>Template</p>
+                                <p style={{ fontWeight: '500' }}>Template checksheet {checksheet.template}</p>
+                            </div>
+                            <div>
+                                <p style={{ fontSize: '0.75rem', color: '#64748b', marginBottom: '0.25rem', textTransform: 'uppercase' }}>Periode</p>
+                                <p style={{ fontWeight: '500' }}>{checksheet.date}</p>
+                            </div>
+                            <div>
+                                <p style={{ fontSize: '0.75rem', color: '#64748b', marginBottom: '0.25rem', textTransform: 'uppercase' }}>Status</p>
+                                <p style={{ fontWeight: '500', color: progress === 100 ? '#22c55e' : '#f59e0b' }}>
+                                    {progress === 100 ? 'Selesai' : 'Dalam Progress'}
+                                </p>
+                            </div>
                         </div>
+                    </div>
+
+                    {/* Checklist Table */}
+                    <div className="section-card">
+                        {/* Table Header */}
+                        <div style={{
+                            display: 'grid',
+                            gridTemplateColumns: '60px 200px 1fr 120px 200px',
+                            gap: '1rem',
+                            padding: '0.75rem 1rem',
+                            borderBottom: '2px solid #e2e8f0',
+                            fontWeight: '600',
+                            fontSize: '0.875rem',
+                            color: '#64748b'
+                        }}>
+                            <span>NO</span>
+                            <span>NAMA BAGIAN</span>
+                            <span>URAIAN PEKERJAAN</span>
+                            <span style={{ textAlign: 'center' }}>STATUS</span>
+                            <span>KETERANGAN</span>
+                        </div>
+
+                        {/* Category Sections */}
+                        {categories.map((category) => {
+                            const categoryItems = items.filter(i => i.category === category)
+                            const isExpanded = expandedCategories.has(category)
+
+                            return (
+                                <div key={category}>
+                                    {/* Category Header */}
+                                    <div
+                                        onClick={() => toggleCategory(category)}
+                                        style={{
+                                            display: 'flex',
+                                            alignItems: 'center',
+                                            gap: '0.5rem',
+                                            padding: '0.75rem 1rem',
+                                            backgroundColor: '#f8fafc',
+                                            cursor: 'pointer',
+                                            borderBottom: '1px solid #e2e8f0',
+                                            fontWeight: '600',
+                                            fontSize: '0.875rem'
+                                        }}
+                                    >
+                                        <span style={{ transform: isExpanded ? 'rotate(90deg)' : 'rotate(0deg)', transition: '0.2s' }}>▶</span>
+                                        {category}
+                                    </div>
+
+                                    {/* Category Items */}
+                                    {isExpanded && categoryItems.map((item, idx) => (
+                                        <div
+                                            key={item.id}
+                                            style={{
+                                                display: 'grid',
+                                                gridTemplateColumns: '60px 200px 1fr 120px 200px',
+                                                gap: '1rem',
+                                                padding: '0.75rem 1rem',
+                                                borderBottom: '1px solid #e2e8f0',
+                                                fontSize: '0.875rem',
+                                                alignItems: 'center'
+                                            }}
+                                        >
+                                            <span style={{ color: '#3b82f6' }}>{item.no || idx + 1}</span>
+                                            <span style={{ color: '#3b82f6' }}>{item.name}</span>
+                                            <span style={{ color: '#3b82f6' }}>{item.description}</span>
+                                            <div style={{ display: 'flex', gap: '0.5rem', justifyContent: 'center' }}>
+                                                <button
+                                                    onClick={() => handleStatusChange(item.id, 'ok')}
+                                                    style={{
+                                                        padding: '0.25rem 0.75rem',
+                                                        borderRadius: '4px',
+                                                        border: item.status === 'ok' ? 'none' : '1px solid #e2e8f0',
+                                                        cursor: 'pointer',
+                                                        backgroundColor: item.status === 'ok' ? '#22c55e' : 'white',
+                                                        color: item.status === 'ok' ? 'white' : '#64748b',
+                                                        fontWeight: 500,
+                                                        fontSize: '0.75rem'
+                                                    }}
+                                                >
+                                                    OK
+                                                </button>
+                                                <button
+                                                    onClick={() => handleStatusChange(item.id, 'nok')}
+                                                    style={{
+                                                        padding: '0.25rem 0.75rem',
+                                                        borderRadius: '4px',
+                                                        border: item.status === 'nok' ? 'none' : '1px solid #e2e8f0',
+                                                        cursor: 'pointer',
+                                                        backgroundColor: item.status === 'nok' ? '#ef4444' : 'white',
+                                                        color: item.status === 'nok' ? 'white' : '#64748b',
+                                                        fontWeight: 500,
+                                                        fontSize: '0.75rem'
+                                                    }}
+                                                >
+                                                    N.OK
+                                                </button>
+                                            </div>
+                                            <input
+                                                type="text"
+                                                placeholder="Tambahkan keterangan..."
+                                                value={item.keterangan}
+                                                onChange={(e) => handleKeteranganChange(item.id, e.target.value)}
+                                                style={{
+                                                    width: '100%',
+                                                    padding: '0.5rem',
+                                                    border: '1px solid #e2e8f0',
+                                                    borderRadius: '4px',
+                                                    fontSize: '0.875rem',
+                                                    backgroundColor: '#f8fafc'
+                                                }}
+                                            />
+                                        </div>
+                                    ))}
+                                </div>
+                            )
+                        })}
+                    </div>
+
+                    {/* Signature Section */}
+                    <div className="section-card" style={{ marginTop: '1.5rem' }}>
+                        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '2rem', textAlign: 'center' }}>
+                            <div>
+                                <p style={{ fontWeight: '600', marginBottom: '1rem', fontSize: '0.875rem' }}>PELAKSANA FASILITAS</p>
+                                <input
+                                    type="text"
+                                    placeholder="NIPP..........."
+                                    value={signatures.pelaksana}
+                                    onChange={(e) => setSignatures(prev => ({ ...prev, pelaksana: e.target.value }))}
+                                    style={{
+                                        width: '100%',
+                                        padding: '0.75rem',
+                                        border: '1px solid #e2e8f0',
+                                        borderRadius: '8px',
+                                        textAlign: 'center',
+                                        fontSize: '0.875rem'
+                                    }}
+                                />
+                            </div>
+                            <div>
+                                <p style={{ fontWeight: '600', marginBottom: '1rem', fontSize: '0.875rem' }}>PENGAWAS FASILITAS</p>
+                                <input
+                                    type="text"
+                                    placeholder="NIPP..........."
+                                    value={signatures.pengawas}
+                                    onChange={(e) => setSignatures(prev => ({ ...prev, pengawas: e.target.value }))}
+                                    style={{
+                                        width: '100%',
+                                        padding: '0.75rem',
+                                        border: '1px solid #e2e8f0',
+                                        borderRadius: '8px',
+                                        textAlign: 'center',
+                                        fontSize: '0.875rem'
+                                    }}
+                                />
+                            </div>
+                            <div>
+                                <p style={{ fontWeight: '600', marginBottom: '1rem', fontSize: '0.875rem' }}>MENGETAHUI SPV FASILITAS</p>
+                                <input
+                                    type="text"
+                                    placeholder="NIPP..........."
+                                    value={signatures.spv}
+                                    onChange={(e) => setSignatures(prev => ({ ...prev, spv: e.target.value }))}
+                                    style={{
+                                        width: '100%',
+                                        padding: '0.75rem',
+                                        border: '1px solid #e2e8f0',
+                                        borderRadius: '8px',
+                                        textAlign: 'center',
+                                        fontSize: '0.875rem'
+                                    }}
+                                />
+                            </div>
+                        </div>
+                    </div>
+
+                    {/* Save Button */}
+                    <div style={{ marginTop: '1.5rem', display: 'flex', justifyContent: 'flex-end' }}>
+                        <button
+                            className="btn btn-primary"
+                            onClick={handleSave}
+                            disabled={saving}
+                            style={{ padding: '0.75rem 2rem' }}
+                        >
+                            {saving ? 'Menyimpan...' : 'Simpan Progress'}
+                        </button>
                     </div>
                 </div>
             </main>
